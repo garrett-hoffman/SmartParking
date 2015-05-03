@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Service"
+            android:id="@+id/beacon_control_fragment_start_button"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop Service"
+            android:id="@+id/beacon_control_fragment_stop_button"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle Background"
+            android:id="@+id/beacon_control_fragment_set_background_service_button"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Timings"
+                android:id="@+id/beacon_control_fragment_set_timings_button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/beacon_control_fragment_foreground_edittext"
+                android:text="0"
+                android:layout_below="@+id/beacon_control_fragment_set_timings_button"
+                android:layout_alignLeft="@+id/beacon_control_fragment_set_timings_button"
+                android:layout_alignStart="@+id/beacon_control_fragment_set_timings_button"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/beacon_control_fragment_foreground_delay_edittext"
+                android:layout_below="@+id/beacon_control_fragment_foreground_edittext"
+                android:layout_alignRight="@+id/beacon_control_fragment_foreground_edittext"
+                android:text="0"
+                android:layout_alignEnd="@+id/beacon_control_fragment_foreground_edittext"
+                android:layout_alignLeft="@+id/beacon_control_fragment_set_timings_button"
+                android:layout_alignStart="@+id/beacon_control_fragment_set_timings_button"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/beacon_control_fragment_background_edittext"
+                android:layout_below="@+id/beacon_control_fragment_foreground_delay_edittext"
+                android:layout_alignRight="@+id/beacon_control_fragment_foreground_delay_edittext"
+                android:text="0"
+                android:layout_alignEnd="@+id/beacon_control_fragment_foreground_delay_edittext"
+                android:layout_alignLeft="@+id/beacon_control_fragment_background_delay_edittext"
+                android:layout_alignStart="@+id/beacon_control_fragment_background_delay_edittext"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/beacon_control_fragment_background_delay_edittext"
+                android:text="0"
+                android:layout_below="@+id/beacon_control_fragment_background_edittext"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:inputType="number"
+                android:layout_alignLeft="@+id/beacon_control_fragment_set_timings_button"
+                android:layout_alignStart="@+id/beacon_control_fragment_set_timings_button"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foreground Scan Period"
+                android:id="@+id/textView2"
+                android:layout_above="@+id/beacon_control_fragment_foreground_delay_edittext"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foreground Scan Period Delay"
+                android:id="@+id/textView3"
+                android:layout_above="@+id/beacon_control_fragment_background_edittext"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Background Scan Period"
+                android:id="@+id/textView4"
+                android:layout_above="@+id/beacon_control_fragment_background_delay_edittext"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Background Scan Period Delay"
+                android:id="@+id/textView5"
+                android:layout_alignBottom="@+id/beacon_control_fragment_background_delay_edittext"
+                />
+    </RelativeLayout>
+</LinearLayout>

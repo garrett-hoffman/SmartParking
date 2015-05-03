@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/beacon_fragment_scroll_data_text_view_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BEACON UUID and Signal Strength:"
+            />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/beacon_fragment_scrollView">
+        <TextView
+                android:id="@+id/beacon_fragment_scroll_data_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+    </ScrollView>
+</LinearLayout>
