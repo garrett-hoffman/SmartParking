@@ -2,8 +2,11 @@ package edu.vanderbilt.kharesp.gimbaltutorial;
 
 import java.util.List;
 
-/**
- * Created by mike on 5/2/15.
+/* Created on 2015/05/02.
+ * <p/>
+ * Contributors:
+ * Michael A. Walker
+ * Shweta P. Khare
  */
 public interface onLocationUpdateInterface {
 

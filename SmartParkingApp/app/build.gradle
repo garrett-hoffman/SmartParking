@@ -37,6 +37,7 @@ dependencies {
     compile files('libs/spring-android-core-1.0.1.RELEASE.jar')
     compile files('libs/spring-android-rest-template-1.0.1.RELEASE.jar')
     compile 'org.altbeacon:android-beacon-library:2+@aar'
+    compile 'com.ls.widgets.map:mappwidgetlib-release:1+@aar'
 }
 
 android {

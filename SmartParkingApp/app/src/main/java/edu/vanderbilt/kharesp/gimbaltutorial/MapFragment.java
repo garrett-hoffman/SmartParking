@@ -11,8 +11,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by mike on 5/2/15.
+/* Created on 2015/05/02.
+ * <p/>
+ * Contributors:
+ * Michael A. Walker
+ * Shweta P. Khare
  */
 public class MapFragment extends Fragment implements onLocationUpdateInterface {
 
@@ -63,8 +66,15 @@ public class MapFragment extends Fragment implements onLocationUpdateInterface {
     @Override
     public void onLocationUpdate(List<BeaconData> beacons) {
 
+        /**
+         * Prevent Activity from mistakenly trying to change Views when not attached.
+         */
+        if (this.isDetached()) {
+            return;
+        }
+
         for (int i = 0; i < beacons.size(); i++) {
-            addTextToScrollTextView("" + beacons.get(i).UUID + "  " + beacons.get(i).signalStrenth);
+            addTextToScrollTextView("" + beacons.get(i).ID1 + "  " + beacons.get(i).signalStrenth);
         }
         addTextToScrollTextView("--------------------");
     }

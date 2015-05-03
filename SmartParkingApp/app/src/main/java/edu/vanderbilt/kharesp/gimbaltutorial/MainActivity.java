@@ -20,26 +20,35 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/*
+ * Main Activity for Beacon Access/Use & Development/Testing.
+ * <p/>
+ * Created on 2015/05/02.
+ * <p/>
+ * Contributors:
+ * Shweta P. Khare
+ * Michael A. Walker
+ */
 public class MainActivity extends ActionBarActivity implements BeaconConsumer, // Beacons
         OnMapReadyCallback, // Google Maps
         BeaconControlActivityInterface // allow Fragments to control Beacon timing/mode & on/off
 {
-    /**
+    /*
      * String used in Logging.
      */
     public String LOG = this.getClass().getCanonicalName();
 
-    /**
+    /*
      * Constant(s) for use with Handler associated with this class.
      */
     public static int HANDLER_FLAG_REFRESH_BEACON_DATA = 1;
 
-    /**
+    /*
      * Beacon Manager Service.
      */
     private org.altbeacon.beacon.BeaconManager altBeaconManager;
 
-    /**
+    /*
      * Current Beacon List.
      */
     private static List<BeaconData> beaconData;
@@ -105,7 +114,7 @@ public class MainActivity extends ActionBarActivity implements BeaconConsumer, /
         Log.i(LOG, "Main Activity's OnCreate Called.");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /**
+        /*
          * Setup Beacon Manager (Service)
          */
         altBeaconManager = org.altbeacon.beacon.BeaconManager.getInstanceForApplication(this);
@@ -113,7 +122,7 @@ public class MainActivity extends ActionBarActivity implements BeaconConsumer, /
         altBeaconManager.bind(this);
         altBeaconManager.setForegroundScanPeriod(100L);
 
-        /**
+        /*
          * Initialize Fragment(s)
          */
         locationUpdateFragment = new MapFragment();
@@ -124,7 +133,7 @@ public class MainActivity extends ActionBarActivity implements BeaconConsumer, /
         Resources res = getResources();
         isDualFragmentDisplay = res.getBoolean(R.bool.isDualFragment);
 
-        /**
+        /*
          * Initialize Handler
          */
         mHandler = new UIHanlder(this);
@@ -258,7 +267,7 @@ public class MainActivity extends ActionBarActivity implements BeaconConsumer, /
         /*
          * Remove 'swap fragments' menu item when both are displayed
          */
-        if (isDualFragmentDisplay == false){
+        if (isDualFragmentDisplay == false) {
             menu.removeItem(R.id.swap_fragments);
         }
         return true;
@@ -272,10 +281,11 @@ public class MainActivity extends ActionBarActivity implements BeaconConsumer, /
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-
+        /*
+         * Handle action bar item clicks here. The action bar will
+         * automatically handle clicks on the Home/Up button, so long
+         * as you specify a parent activity in AndroidManifest.xml.
+         */
         switch (item.getItemId()) {
             case R.id.action_settings: {
                 return true;
