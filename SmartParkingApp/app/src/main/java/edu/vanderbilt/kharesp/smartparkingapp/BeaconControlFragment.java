@@ -11,12 +11,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import edu.vanderbilt.kharesp.gimbaltutorial.R;
 
-/**
+/*
  * Created on 2015/05/02.
  * <p/>
  * Contributors:
  * Michael A. Walker
  * Shweta P. Khare
+ */
+
+/**
+ * Fragment to allow the control of the Beacon gathering service
  */
 public
 class BeaconControlFragment extends Fragment {

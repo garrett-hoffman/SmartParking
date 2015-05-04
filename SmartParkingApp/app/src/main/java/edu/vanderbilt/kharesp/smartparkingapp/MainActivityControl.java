@@ -22,13 +22,15 @@ import java.util.Collection;
 import java.util.List;
 
 /*
- * Main Activity for Beacon Access/Use & Development/Testing.
- * <p/>
  * Created on 2015/05/02.
  * <p/>
  * Contributors:
  * Shweta P. Khare
  * Michael A. Walker
+ */
+
+/**
+ * Main Activity for Beacon Access/Use & Development/Testing.
  */
 public
 class MainActivityControl extends ActionBarActivity implements BeaconConsumer,

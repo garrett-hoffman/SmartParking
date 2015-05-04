@@ -1,10 +1,3 @@
-/*
- * Created on 2015/05/02.
- * <p/>
- * Contributors:
- * Michael A. Walker
- * Shweta P. Khare
- */
 package edu.vanderbilt.kharesp.smartparkingapp;
 
 import android.app.Activity;
@@ -15,6 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import edu.vanderbilt.kharesp.gimbaltutorial.R;
+
+/*
+ * Created on 2015/05/02.
+ * <p/>
+ * Contributors:
+ * Michael A. Walker
+ * Shweta P. Khare
+ */
 
 /**
  * A simple {@link Fragment} subclass.

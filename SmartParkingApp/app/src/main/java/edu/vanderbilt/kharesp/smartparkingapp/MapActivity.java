@@ -6,13 +6,16 @@ import android.widget.LinearLayout;
 import com.ls.widgets.map.MapWidget;
 import edu.vanderbilt.kharesp.gimbaltutorial.R;
 
-/**
- * This Activity will display a map (no fragment at this point)
+/*
  * Created on 5/3/15.
  * <p/>
  * Contributors:
  * Michael A. Walker
  * Shweta P. Khare
+ */
+
+/**
+ * This Activity will display a map (no fragment at this point)
  */
 public
 class MapActivity extends Activity {

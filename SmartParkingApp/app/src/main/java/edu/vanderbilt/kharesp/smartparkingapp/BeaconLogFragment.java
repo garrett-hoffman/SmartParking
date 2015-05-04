@@ -32,7 +32,8 @@ class BeaconLogFragment extends Fragment { //implements onLocationUpdateInterfac
 
 	 /*
 	  * The TextView which will display the updated info.
-	  */ TextView dataList;
+	  */
+	 TextView dataList;
 	 ScrollView scrollView;
 
 	 /*
@@ -102,7 +103,6 @@ class BeaconLogFragment extends Fragment { //implements onLocationUpdateInterfac
 		  // get amount to scroll
 		  final int amountToScroll = dataList.getLineCount() * dataList.getLineHeight();
 		  // if there is no need to scroll, amountToScroll will be <=0
-
 		  scrollView.post(new Runnable() {
 				@Override
 				public
